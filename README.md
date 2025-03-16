@@ -180,6 +180,11 @@ After setting up ZSH integration with `ai --setup-zsh`, you can press `Alt+i` in
 
 [MIT License](LICENSE)
 
+## Author
+
+Ashley Rodan 
+github: @ashrodan
+
 ## Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
