@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="600" height="400" viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background Rectangle (Transparent) -->
+  <rect width="600" height="400" fill="none"/>
+  
+  <!-- Terminal Window -->
+  <rect x="150" y="100" width="300" height="200" rx="10" ry="10" fill="#1E1E24" stroke="#0A2540" stroke-width="8"/>
+  
+  <!-- Terminal Header Bar -->
+  <rect x="150" y="100" width="300" height="30" rx="10" ry="10" fill="#0A2540"/>
+  
+  <!-- Terminal Buttons -->
+  <circle cx="170" cy="115" r="6" fill="#FF5F57"/>
+  <circle cx="190" cy="115" r="6" fill="#FEBC2E"/>
+  <circle cx="210" cy="115" r="6" fill="#28C840"/>
+  
+  <!-- Command Prompt Symbol -->
+  <text x="170" y="165" font-family="monospace" font-size="24" fill="#00D4C8">$</text>
+  
+  <!-- Brain/Neural Network Symbol -->
+  <g transform="translate(290, 175) scale(0.8)">
+    <!-- Neural network nodes -->
+    <circle cx="0" cy="0" r="40" fill="none" stroke="#7B4DFF" stroke-width="3"/>
+    <circle cx="-20" cy="-30" r="10" fill="#7B4DFF"/>
+    <circle cx="30" cy="-20" r="10" fill="#7B4DFF"/>
+    <circle cx="20" cy="35" r="10" fill="#7B4DFF"/>
+    <circle cx="-30" cy="25" r="10" fill="#7B4DFF"/>
+    
+    <!-- Neural connections -->
+    <line x1="-20" y1="-30" x2="30" y2="-20" stroke="#7B4DFF" stroke-width="2"/>
+    <line x1="-20" y1="-30" x2="-30" y2="25" stroke="#7B4DFF" stroke-width="2"/>
+    <line x1="-20" y1="-30" x2="20" y2="35" stroke="#7B4DFF" stroke-width="2"/>
+    <line x1="30" y1="-20" x2="-30" y2="25" stroke="#7B4DFF" stroke-width="2"/>
+    <line x1="30" y1="-20" x2="20" y2="35" stroke="#7B4DFF" stroke-width="2"/>
+    <line x1="-30" y1="25" x2="20" y2="35" stroke="#7B4DFF" stroke-width="2"/>
+  </g>
+  
+  <!-- Command Text (representing AI-generated command) -->
+  <text x="195" y="165" font-family="monospace" font-size="16" fill="#FFFFFF">ai your desired </text>
+  <text x="195" y="190" font-family="monospace" font-size="16" fill="#FFFFFF">shell prompt</text>
+  
+  <!-- AI Shell Text -->
+  <text x="300" y="250" font-family="Inter, Roboto, sans-serif" font-size="36" font-weight="bold" text-anchor="middle" fill="#0A2540">
+    <tspan fill="#7B4DFF">AI Shell</tspan>
+  </text>
+</svg>

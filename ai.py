@@ -67,14 +67,20 @@ def get_bash_command(prompt_text: str) -> str:
     log.info(f"Generating command for prompt: {prompt_text}")
     
     try:
-        # Instantiate the Anthropic client (make sure ANTHROPIC_API_KEY is set)
-        client = anthropic.Anthropic()
+        # Explicitly get API key from environment
+        api_key = os.environ.get("ANTHROPIC_API_KEY")
+        if not api_key:
+            log.error("ANTHROPIC_API_KEY environment variable is not set")
+            raise ValueError("ANTHROPIC_API_KEY not found. Please set it with: export ANTHROPIC_API_KEY='your_api_key'")
+            
+        # Instantiate the Anthropic client with explicit API key
+        client = anthropic.Anthropic(api_key=api_key)
         
         # Create a message request with the prompt, specifically asking for a bash command
         response = client.messages.create(
             max_tokens=150,
             messages=[
-                {"role": "user", "content": f"Provide a precise bash command to: {prompt_text}. Only return the exact command, no explanation."}
+                {"role": "user", "content": f"Provide a precise bash command to: {prompt_text}. Only return the exact command, no explanation. Ensure it works for Mac/Linux, keep it simple."}
             ],
             model="claude-3-5-sonnet-latest"
         )
